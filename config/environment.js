@@ -4,6 +4,12 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'beer-tracker',
     environment: environment,
+    firebase: {
+      apiKey: "AIzaSyA9xX9glN1i7UODg5Y1W5VEUyWspmqAUbY",
+      authDomain: "beer-tracker-1891b.firebaseapp.com",
+      databaseURL: "https://beer-tracker-1891b.firebaseio.com",
+      storageBucket: "beer-tracker-1891b.appspot.com"
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
