@@ -15,5 +15,6 @@
   {{/each}}
 </ul>
 <hr>
-{{input value=brewery.name}}
-{{input value=brewery.yearsOpen}}
+
+{{input value=newItem}}
+<button {{action 'saveNewItem' newItem}}>Save</button>
