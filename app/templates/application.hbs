@@ -4,12 +4,15 @@
 <ul>
   {{#each model as |beer|}}
   {{#if beer.isAvailable}}
-    <li>{{beer.name}}</li>
+    <li>{{beer.name}}
     <button {{action "makeUnavailable" beer}}>Make Unavailable</button>
+    </li>
     {{else}}
-      <li class="not-available"><s>{{beer.name}}</s></li>
+      <li class="not-available">
+        {{beer.name}}
       <button {{action "makeAvailable" beer}}>Make Available</button>
-
+      <button {{action "destroyItem" beer}}>Delete</button>
+      </li>
   {{/if}}
 
   {{/each}}
