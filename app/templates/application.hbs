@@ -1,23 +1,5 @@
-<h1>Beer Tracker</h1>
-<p id="explanation">Our beer is {{brewery.name}}! We have been open for {{brewery.yearsOpen}}!</p>
-<h2>Beer Tracker helps you see what dishes are available today</h2>
-<ul>
-  {{#each model as |beer|}}
-  {{#if beer.isAvailable}}
-    <li>{{beer.name}}
-    <button {{action "makeUnavailable" beer}}>Make Unavailable</button>
-    </li>
-    {{else}}
-      <li class="not-available">
-        {{beer.name}}
-      <button {{action "makeAvailable" beer}}>Make Available</button>
-      <button {{action "destroyItem" beer}}>Delete</button>
-      </li>
-  {{/if}}
-
-  {{/each}}
-</ul>
+{{link-to 'About' 'about'}}
+{{link-to 'Contact' 'contact'}}
+{{link-to 'Beers' 'beers'}}
 <hr>
-
-{{input value=newItem}}
-<button {{action 'saveNewItem' newItem}}>Save</button>
+{{outlet}}

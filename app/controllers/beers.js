@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   newItem: null,
+  menuLength: Ember.computed.alias('model.length'),
+  availableItems: Ember.computed.filterBy('model', 'isAvailable', true),
   actions: {
     makeUnavailable(beer) {
       Ember.set(beer, 'isAvailable', false);
