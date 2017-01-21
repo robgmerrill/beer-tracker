@@ -6,8 +6,9 @@
 <ul>
   {{#each model as |beer|}}
   {{#if beer.isAvailable}}
-    <li>{{beer.name}}
-    <button {{action "makeUnavailable" beer}}>Make Unavailable</button>
+    <li>
+      {{#link-to 'beer' beer}}{{beer.name}}{{/link-to}}
+      <button {{action "makeUnavailable" beer}}>Make Unavailable</button>
     </li>
     {{else}}
       <li class="not-available">
