@@ -7,19 +7,17 @@
     <p>{{availableItems.length}} beers available </p>
     <ul>
       {{#each model as |beer|}}
-      {{#if beer.isAvailable}}
-        <li>
-          {{#link-to 'beers.beer' beer}}{{beer.name}}{{/link-to}}
-          <button {{action "makeUnavailable" beer}}>Make Unavailable</button>
-        </li>
-        {{else}}
-          <li class="not-available">
-            {{beer.name}}
-          <button {{action "makeAvailable" beer}}>Make Available</button>
-          </li>
-      {{/if}}
+        <li class="{{if beer.isAvailable '' 'not-available'}}">
+          {{#link-to 'beers.beer' beer.id}}{{beer.name}}{{/link-to}}!
+          {{#if beer.isAvailable}}
+            <button {{action 'makeUnavailable' beer}}>Make Unavailable</button>
+            {{else}}
+              <button {{action 'makeAvailable' beer}}>Make Available</button>
+              {{/if}}
+            </li>
 
-      {{/each}}
+
+        {{/each}}
     </ul>
     <hr>
 

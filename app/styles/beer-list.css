@@ -1,3 +1,7 @@
 li.not-available {
-  color: grey;
+  color: #BBB;
+}
+
+li.not-available a {
+  color: #BBB;
 }
