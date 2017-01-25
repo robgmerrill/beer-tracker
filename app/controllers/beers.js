@@ -10,18 +10,15 @@ export default Ember.Controller.extend({
       beer.save();
     },
     makeAvailable(beer) {
-      Ember.set(beer, 'isAvailable', true)
+      Ember.set(beer, 'isAvailable', true);
       beer.save();
     },
     saveNewItem() {
       this.store.createRecord('beer', {
         isAvailable: false,
         name: this.get('newItem')
-      }).save()
-      Ember.set(this, 'newItem', '')
-    },
-    destroyItem(beer) {
-      beer.destroyRecord();
+      }).save();
+      Ember.set(this, 'newItem', '');
     }
   }
   });
