@@ -1,0 +1,8 @@
+<li class="{{if beer.isAvailable '' 'not-available'}}">
+  {{#link-to 'beers.beer' beer.id}}{{beer.name}}{{/link-to}}!
+  {{#if beer.isAvailable}}
+    <button {{action 'makeUnavailable' beer}}>Make Unavailable</button>
+  {{else}}
+    <button {{action 'makeAvailable' beer}}>Make Available</button>
+  {{/if}}
+</li>
