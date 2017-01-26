@@ -2,9 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
+    isOpen: false,
     toggleAvailability(beer) {
-      beer.set('isAvailable', !beer.get('isAvailable'));
+      beer.toggleProperty('isAvailable');
       beer.save();
+    },
+    toggleOpen() {
+      this.toggleProperty('isOpen');
     }
   }
 });

@@ -1,7 +1,7 @@
 # beer-tracker
 
 This README outlines the details of collaborating on this Ember application.
-Beer tracker allows you to list beers you have at home. You can add, delete and edit each item. I would like to continue to build this out to have the beers belonging to multiple breweries with availability, reviews and ratings for beers and maybe even breweries. 
+Beer tracker allows you to list beers you have at home. You can add, delete and edit each item. I would like to continue to build this out to have the beers belonging to multiple breweries with availability, reviews and ratings for beers and maybe even breweries.
 
 ## Prerequisites
 

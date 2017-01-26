@@ -30,3 +30,46 @@
     font-size: 12px;
     background-color: #4CAF50;
 }*/
+.not-available {
+  color: #BBB;
+}
+
+.not-available a {
+  color: #BBB;
+}
+
+.beer-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  max-width: 250px;
+  padding: 4px;
+  margin: 5px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.beer-item .title-bar {
+  font-size: 1.3em;
+}
+
+.beer-item .description {
+  padding: 8px;
+}
+
+.img-icon {
+  max-width: 150px;
+  max-height: 150px;
+  px;
+  padding: 5px;
+  float: left;
+}
+
+.description {
+  min-height: 70px;
+}

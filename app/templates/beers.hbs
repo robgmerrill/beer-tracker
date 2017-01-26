@@ -1,17 +1,15 @@
 <div class="flex-container">
   <div class="flex-item">
     <h1>Beer Tracker</h1>
-    <p id="explanation">Our beer is {{brewery.name}}! We have been open for {{brewery.yearsOpen}} years!</p>
+    <p id="explanation">Our brewery is {{brewery.name}}! We have been open for {{brewery.yearsOpen}} years!</p>
     <h2>Beer Tracker helps you see what beers are available today</h2>
+    <h3>Click on any beer below to see a description or edit a description</h3>
     <p>{{onTapLength}} beers</p>
     <p>{{availableItems.length}} beers available </p>
-    <ul>
       {{#each model as |beer|}}
         {{beer-item beer=beer}}
       {{/each}}
-    </ul>
-    <hr>
-    {{input value=newItem}}
+    <hr> {{input value=newItem}}
     <button {{action 'saveNewItem' newItem}}>Save</button>
   </div>
   <div class="flex-item">

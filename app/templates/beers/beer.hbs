@@ -1,4 +1,7 @@
 <h1>My beer is the {{model.name}}</h1>
 <p>{{model.description}}</p>
+<img src="{{model.imageUrl}}" class="img-icon" />
+<br>
+
 {{link-to 'Edit this beer' 'beers.beer.edit' model}}
 <button {{action "destroyItem" model}}>Delete</button>
