@@ -2,10 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   newItem: null,
-  menuLength: Ember.computed.alias('model.length'),
+  brewery: {
+    name: "Merrill Brewery",
+    yearsOpen: 3
+  },
+  onTapLength: Ember.computed.alias('model.length'),
   availableItems: Ember.computed.filterBy('model', 'isAvailable', true),
   actions: {
-  
+
     saveNewItem() {
       this.store.createRecord('beer', {
         isAvailable: false,
