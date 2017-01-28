@@ -73,3 +73,10 @@
 .description {
   min-height: 70px;
 }
+
+.email-status {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
