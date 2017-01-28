@@ -1,7 +1,7 @@
 <div class="beer-item {{if beer.isAvailable '' 'not-available'}}">
   <div {{action 'toggleOpen'}} class="title-bar">{{beer.name}} <span class="pull-right">{{if isOpen 'V' '>'}}</span></div>
   {{#if isOpen}}
-    <img src={{beer.imageUrl}} class="img-icon pull-left">
+  {{icon-image beer.imageUrl left=true}}
     <div class="description">{{beer.description}}</div>
     {{#link-to 'beers.beer' beer.id}}<button>Show</button>{{/link-to}}
     {{#link-to 'beers.beer.edit' beer.id}}<button>Edit</button>{{/link-to}}

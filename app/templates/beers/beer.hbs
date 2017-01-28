@@ -1,6 +1,6 @@
 <h1>My beer is the {{model.name}}</h1>
 <p>{{model.description}}</p>
-<img src="{{model.imageUrl}}" class="img-icon" />
+{{icon-image model.imageUrl}}
 <br>
 
 {{link-to 'Edit this beer' 'beers.beer.edit' model}}

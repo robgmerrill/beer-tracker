@@ -4,6 +4,6 @@ We're editing beer
 <p>Description: {{textarea value=model.description class="medium-text-area"}}</p>
 <p>Image URL: {{input value=model.imageUrl}}</p>
 
-<img src="{{model.imageUrl}}" class="img-icon" />
+{{icon-image model.imageUrl}}
 <br>
 <button {{action 'save'}}>Save</button>
