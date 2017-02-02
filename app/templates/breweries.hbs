@@ -1,11 +1,15 @@
-<h1>Breweries</h1>
+<div class="flex-container">
+  <div class="flex-item">
 
-<ul>
-  {{#each model as |brewery|}}
-    <li>
-    {{brewery.name}}
-  </li>
-  {{/each}}
-</ul>
+    <h1>Breweries</h1>
 
-{{outlet}}
+    <ul>
+      {{#each model as |brewery|}}
+        {{#link-to 'breweries.brewery' brewery.id}}<li>{{brewery.name}}</li>{{/link-to}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="flex-item">
+    {{outlet}}
+</div>
+</div>

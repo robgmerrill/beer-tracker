@@ -15,7 +15,9 @@ Router.map(function() {
   this.route('contact');
   this.route('breweries', function() {
     this.route('brewery', { path: ':brewery_id' });
+    this.route('brewery.edit', { path:  ':brewery_id/edit' });
+    });
   });
-});
+
 
 export default Router;
